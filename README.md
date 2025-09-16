@@ -4,6 +4,9 @@ This project was created using `bun create mcmd-app` in Bun. [Bun](https://bun.s
 
 ### Installation
 
+> [!WARNING]
+> MCMD plugin isn't available on node.js right now. Make sure to use Bun.
+
 ```bash
 bun install
 ```
@@ -12,10 +15,10 @@ bun install
 
 Transpile the code (dev mode)
 ```bash
-bun run transpile
+bun --bun run transpile
 
 # or
-# bunx mcmd transpile
+# bunx --bun mcmd transpile
 ```
 
 Run the CLI (dev mode)
@@ -28,10 +31,10 @@ bun run cli --name Rajat
 
 Build the CLI
 ```bash
-bun run build
+bun --bun run build
 
 # or
-# bunx mcmd build
+# bunx --bun mcmd build
 ```
 
 ### Folder Structure
@@ -86,11 +89,14 @@ export default () => {
 
 ### Final Build
 
+> [!IMPORTANT]
+> Make sure to use Bun for building the CLI.
+
 ```bash
-bun run build
+bun --bun run build
 
 # or
-# bunx mcmd build
+# bunx --bun mcmd build
 ```
 
 ### Publish CLI
@@ -111,6 +117,9 @@ bun publish
 ```
 
 ### Enjoy CLI
+
+> [!TIP]
+> Now you don't strictly need bun to run your CLI.
 
 ```bash
 bunx my-cli --name Rajat
