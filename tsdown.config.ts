@@ -1,9 +1,9 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-	entry: ["./mcmd/cli.ts"],
+	entry: ["./.mcmd/cli.ts"],
 	format: ["esm"],
-	dts: true,
+	dts: false,
 	banner: {
 		js: "#!/usr/bin/env node",
 	},

@@ -4,37 +4,44 @@ This project was created using `bun create mcmd-app` in Bun. [Bun](https://bun.s
 
 ### Installation
 
-> [!WARNING]
-> MCMD plugin isn't available on node.js right now. Make sure to use Bun.
-
 ```bash
-bun install
+npm install
 ```
 
 ### Usage
 
 Transpile the code (dev mode)
 ```bash
-bun --bun run transpile
+npm run transpile
 
 # or
-# bunx --bun mcmd transpile
+npx mcmd transpile
 ```
 
-Run the CLI (dev mode)
+Run the CLI before converting to javascript
 ```bash
-bun run cli --name Rajat
+node ./.mcmd/cli.ts --name Rajat
 
 # or
-# bun run ./.mcmd/cli.ts
+npm run cli --name Rajat
+npx tsx ./.mcmd/cli.ts --name Rajat
+bun run ./.mcmd/cli.ts --name Rajat
 ```
 
 Build the CLI
 ```bash
-bun --bun run build
+npm run build
 
 # or
-# bunx --bun mcmd build
+npx mcmd build
+```
+
+Run the CLI after converting to javascript
+```bash
+node ./dist/cli.js --name Rajat
+
+# or
+bun run ./dist/cli.js --name Rajat
 ```
 
 ### Folder Structure
@@ -52,10 +59,10 @@ root
  │ └── login.ts          # npx my-cli login
  │
  ├── package.json
- ├── build.ts
  ├── .gitignore
  ├── README.md
- └── tsconfig.json
+ ├── tsconfig.json
+ └── tsdown.config.ts    # default bundler
 ```
 
 ### Coding
@@ -89,19 +96,20 @@ export default () => {
 
 ### Final Build
 
-> [!IMPORTANT]
-> Make sure to use Bun for building the CLI.
-
 ```bash
-bun --bun run build
+npm run build
 
 # or
-# bunx --bun mcmd build
+npx mcmd build
+
+# or, split the work
+npx mcmd transpile
+npx tsdown
 ```
 
 ### Publish CLI
 
-```json
+```jsonc
 // package.json
 {
     "name": "my-cli",
@@ -113,19 +121,18 @@ bun --bun run build
 ```
 
 ```bash
-bun publish
+npm login
+npm publish
 ```
 
 ### Enjoy CLI
 
-> [!TIP]
-> Now you don't strictly need bun to run your CLI.
-
 ```bash
+npx my-cli --name Rajat
 bunx my-cli --name Rajat
 ```
 
 ### References
 
-- [Bun](https://bun.sh)
 - [MCMD](https://github.com/rajatsandeepsen/mcmd)
+- [tsdown](https://tsdown.dev/)

@@ -3,26 +3,27 @@
 	"description": "Starter Template for MCMD - Meta framework for building CLI",
 	"version": "0.0.1",
 	"type": "module",
-	"exports": "./dist/cli.js",
-	"bin": "./dist/cli.js",
+	"exports": "./dist/cli.mjs",
+	"bin": "./dist/cli.mjs",
 	"files": [
 		"dist/**/*"
 	],
 	"scripts": {
-		"build": "mcmd build",
 		"transpile": "mcmd transpile",
-		"cli": "bun run ./.mcmd/cli.ts"
+		"cli": "node ./.mcmd/cli.ts",
+		"build": "mcmd build",
+		"test": "node ./dist/cli.mjs",
+		"check": "tsc"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.0",
-		"@types/bun": "latest",
 		"tsdown": "^0.22.3"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"mcmd": "0.0.93",
+		"mcmd": "0.1.0",
 		"zod": "^3.25.67"
 	},
 	"repository": {
