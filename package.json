@@ -1,31 +1,38 @@
 {
-  "name": "create-mcmd-app",
-  "description": "Starter Template for MCMD - Meta framework for building CLI",
-  "version": "0.0.0",
-  "type": "module",
-  "exports": "./dist/cli.js",
-  "bin": "./dist/cli.js",
-  "files": ["dist/**/*"],
-  "scripts": {
-    "build": "mcmd build",
-    "transpile": "mcmd transpile",
-    "cli": "bun run ./.mcmd/cli.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "bun-plugin-dts": "^0.3.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "mcmd": "0.0.92",
-    "zod": "^3.25.67"
-  },
-  "repository": {
-    "directory": "/",
-    "url": "https://github.com/rajatsandeepsen/create-mcmd-app",
-    "type": "git"
-  },
-  "keywords": ["mcmd", "cli", "zod"]
+	"name": "create-mcmd-app",
+	"description": "Starter Template for MCMD - Meta framework for building CLI",
+	"version": "0.0.1",
+	"type": "module",
+	"exports": "./dist/cli.js",
+	"bin": "./dist/cli.js",
+	"files": [
+		"dist/**/*"
+	],
+	"scripts": {
+		"build": "mcmd build",
+		"transpile": "mcmd transpile",
+		"cli": "bun run ./.mcmd/cli.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.0",
+		"@types/bun": "latest",
+		"tsdown": "^0.22.3"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"mcmd": "0.0.93",
+		"zod": "^3.25.67"
+	},
+	"repository": {
+		"directory": "/",
+		"url": "https://github.com/rajatsandeepsen/create-mcmd-app",
+		"type": "git"
+	},
+	"keywords": [
+		"mcmd",
+		"cli",
+		"zod"
+	]
 }

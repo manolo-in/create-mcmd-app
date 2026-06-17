@@ -1,8 +1,8 @@
 export const options = z.object({
-    name: z.string(),
+	name: z.string(),
 });
 
 export default Command((data) => {
-    const { name } = data;
-    Console.log("Hi", name);
+	const { name } = data;
+	Console.log("Hi", name);
 });
