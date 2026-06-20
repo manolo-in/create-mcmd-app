@@ -1,6 +1,6 @@
 {
 	"name": "create-mcmd-app",
-	"description": "Starter Template for MCMD - Meta framework for building CLI",
+	"description": "Starter Template for MCMD - Meta framework for building CLI tools",
 	"version": "0.0.1",
 	"type": "module",
 	"exports": "./dist/cli.mjs",
@@ -23,17 +23,7 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"mcmd": "0.1.0",
+		"mcmd": "0.1.2",
 		"zod": "^3.25.67"
-	},
-	"repository": {
-		"directory": "/",
-		"url": "https://github.com/rajatsandeepsen/create-mcmd-app",
-		"type": "git"
-	},
-	"keywords": [
-		"mcmd",
-		"cli",
-		"zod"
-	]
+	}
 }

@@ -25,9 +25,8 @@
 		"noPropertyAccessFromIndexSignature": false,
 
 		// To get MCMD type definitions (don't remove)
-		"types": ["@types/node", "mcmd/type"]
+		"types": ["mcmd/type"]
 	},
-	"extends": ["mcmd/base.json"],
 	"include": ["."],
 	"exclude": ["dist", "node_modules"]
 }
